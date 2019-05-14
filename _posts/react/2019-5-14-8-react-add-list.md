@@ -340,9 +340,9 @@ class App extends Component {
     onSubmitHandler = () => {
     // 저장 버튼을 클릭 했을 때 호출된다.
         const newArr = this.state.users.concat({
-        id: this.state.users.length + 1,
-        age: this.state.age,
-        name: this.state.name
+            id: this.state.users.length + 1,
+            age: this.state.age,
+            name: this.state.name
         });
         this.setState({ users: newArr });
     };
