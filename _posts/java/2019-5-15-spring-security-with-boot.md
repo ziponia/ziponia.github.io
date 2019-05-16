@@ -244,16 +244,10 @@ _login.html_
     <fieldset>
       <legend>로그인</legend>
       <form th:action="@{/login}" th:method="post">
-        <input
-          type="text"
-          name="username"
-          placeholder="아이디를 입력 해 주세요."
-        /><br />
-        <input
-          type="password"
-          name="password"
-          placeholder="비밀번호를 입력 해 주세요."
-        /><br />
+        <input type="text" name="username" placeholder="아이디를 입력 해 주세요." />
+        <br />
+        <input type="password" name="password" placeholder="비밀번호를 입력 해 주세요." />
+        <br />
         <button type="submit">로그인</button>
       </form>
     </fieldset>
@@ -550,16 +544,10 @@ ROLE*USER 의 이미가 혼란스러울 수 있다. InMemory 형태에서는 USE
 지금 로그인 폼에 보면,
 
 ```html
-<input
-  type="text"
-  name="username"
-  placeholder="아이디를 입력 해 주세요."
-/><br />
-<input
-  type="password"
-  name="password"
-  placeholder="비밀번호를 입력 해 주세요."
-/><br />
+<input type="text" name="username" placeholder="아이디를 입력 해 주세요." />
+<br />
+<input type="password" name="password" placeholder="비밀번호를 입력 해 주세요." />
+<br />
 ```
 
 형식으로 name 이 지정이 되어있다.

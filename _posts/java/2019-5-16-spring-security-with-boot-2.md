@@ -100,6 +100,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .passwordParameter("password")
             .failureUrl("/login?error=true")
         .and()
+            .logout()
+            .deleteCookies("JSESSIONID")
+            .clearAuthentication(true)
+            .invalidateHttpSession(true)
+        .and()
             .exceptionHandling()
                 .accessDeniedPage("/access_denied")// access denied page
         ;
@@ -165,22 +170,26 @@ _templates/layout/layout.html_
 _templates/layout/navigation.html_
 
 ```html
-<html
-  xmlns:th="http://www.thymeleaf.org"
-  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
->
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
   <th:block layout:fragment="navigation">
     <nav class="navbar navbar-default">
       <ul class="nav navbar-nav">
         <li><a th:href="@{/}">홈</a></li>
         <li><a th:href="@{/admin}">관리자 페이지</a></li>
         <li><a th:href="@{/private}">개인 페이지</a></li>
-        <li><a th:href="@{/login(logout)}">로그아웃</a></li>
+        <li>
+          <a href="javascript: void(0);" onclick="document.getElementById('logout-form').submit()">
+            로그아웃
+          </a>
+        </li>
       </ul>
     </nav>
+    <form id="logout-form" th:action="@{/logout}" method="post"></form>
   </th:block>
 </html>
 ```
+
+> 2019년 5월 16일 노트. security 의 logout 기본설정은 GET /logout 이 아니고 POST /logout 이다.
 
 _access_denied.html_
 
