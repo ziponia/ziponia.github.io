@@ -1,18 +1,59 @@
 ---
 layout: default
+title: Home
 ---
 
 <div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+    {% if post.summary %}
+    {{ post.summary }}
+    {% endif %}
+  </div>
   {% endfor %}
 </div>
+
+<!-- <div class="pagination">
+  {% if paginator.next_page %}
+  <a class="pagination-item older" href="{{ site.baseurl }}/page{{ paginator.next_page }}">Older</a>
+  {% else %}
+  <span class="pagination-item older">Older</span>
+  {% endif %} {% if paginator.previous_page %} {% if paginator.page == 2 %}
+  <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
+  {% else %}
+  <a class="pagination-item newer" href="{{ site.baseurl }}/page{{ paginator.previous_page }}">
+    Newer
+  </a>
+  {% endif %} {% else %}
+  <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div> -->
+
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+  {% else %}
+  <span>&laquo; Prev</span>
+  {% endif %} {% for page in (1..paginator.total_pages) %} {% if page == paginator.page %}
+  <em>{{ page }}</em>
+  {% elsif page == 1 %}
+  <a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
+  {% else %}
+  <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+  {% endif %} {% endfor %} {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+  {% else %}
+  <span>Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}

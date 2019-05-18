@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "[SPRING] Spring Security 사용하기 #4"
+summary: "Spring boot oauth2 에 Database 를 연결 하자"
 ---
-
-Spring boot oauth2 에 Database 를 연결 하자
 
 이번에는 지난 시간에 한 oauth2 로그인에 이어, Database 와 연동을 해보겠다.
 
