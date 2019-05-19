@@ -237,15 +237,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 _최초_
 
-![최초이미지](/images/2019-5-17/security_oauth_default_record.png)
+![최초이미지](https://s3.ap-northeast-2.amazonaws.com/ziponia.github.io/2019-5-17/security_oauth_default_record.png)
 
 _페이스북 로그인 후_
 
-![페이스북추가](/images/2019-5-17/security_oauth_default_facebook.png)
+![페이스북추가](https://s3.ap-northeast-2.amazonaws.com/ziponia.github.io/2019-5-17/security_oauth_default_facebook.png)
 
 _깃허브 로그인 후_
 
-![깃허브추가](/images/2019-5-17/security_oauth_default_github.png)
+![깃허브추가](https://s3.ap-northeast-2.amazonaws.com/ziponia.github.io/2019-5-17/security_oauth_default_github.png)
 
 카카오 로그인은 직접 해보자
 

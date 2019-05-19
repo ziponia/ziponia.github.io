@@ -26,7 +26,7 @@ project 폴더를 만들고 `index.html` 을 만든다.
 
 그 다음 플러그인이 정상적으로 설치 되었다면 vscode 하단에 아래와 같은 아이콘이 보일것이다.
 
-![vscode sass image](/images/2019-5-15/sass-vscode-toolbar.png)
+![vscode sass image](https://s3.ap-northeast-2.amazonaws.com/ziponia.github.io/2019-5-15/sass-vscode-toolbar.png)
 
 아이콘을 클릭하면 `Watching...` 상태로 변경 된다.
 

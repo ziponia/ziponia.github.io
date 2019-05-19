@@ -12,7 +12,7 @@ spring initializr 공식 홈페이로 가서 기본적인 설정 후 패키지�
 
 [https://start.spring.io/](https://start.spring.io/)
 
-![spring security with package](/images/2019-5-15/spring-security-with-boot-1.png)
+![spring security with package](https://s3.ap-northeast-2.amazonaws.com/ziponia.github.io/2019-5-15/spring-security-with-boot-1.png)
 
 내가 받은 패키지는 아래와 같다.
 
@@ -28,7 +28,7 @@ spring initializr 공식 홈페이로 가서 기본적인 설정 후 패키지�
 
 이제 프로젝트를 구동시킨 후 [http://127.0.0.1:8080](http://127.0.0.1:8080) 으로 접속하면 기본으로 제공 해 주는 로그인 페이지가 나온다.
 
-![spring security](/images/2019-5-15/spring-security-2.png);
+![spring security](https://s3.ap-northeast-2.amazonaws.com/ziponia.github.io/2019-5-15/spring-security-2.png);
 
 일단 설정 한게 없으니 다음으로 넘어가자
 

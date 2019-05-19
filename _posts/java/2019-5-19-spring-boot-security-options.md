@@ -73,7 +73,7 @@ _login.html_
 
 이제 창 두개를 열고, 각각 로그인 해보자
 
-![one session login](/images/2019-5-19/1.gif)
+![one session login](https://s3.ap-northeast-2.amazonaws.com/ziponia.github.io/2019-5-19/1.gif)
 
 한쪽이 로그인 하면, 다른 한쪽이 로그인 해제 되는것을 볼 수 있다.
 
@@ -146,7 +146,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 이제 체크박스에 체크 후 로그인 하면 remember-me 라는 쿠키가 생성 되는것을 볼 수 있다.
 
-![remember me cookie](/images/2019-5-19/2.png)
+![remember me cookie](https://s3.ap-northeast-2.amazonaws.com/ziponia.github.io/2019-5-19/2.png)
 
 브라우저를 닫고 다시 접속 후 개인페이지로 다시 들어 가 보자.
 
@@ -257,7 +257,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 이제 로그인 후 h2 콘솔을 열어보면 last_login 필드에 기록 되는걸 볼 수 있다.
 
-![마지막 로그인 기록](/images/2019-5-19/3.png)
+![마지막 로그인 기록](https://s3.ap-northeast-2.amazonaws.com/ziponia.github.io/2019-5-19/3.png)
 
 오늘은 여기까지
 
