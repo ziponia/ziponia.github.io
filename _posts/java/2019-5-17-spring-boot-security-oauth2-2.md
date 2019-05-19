@@ -65,10 +65,9 @@ public class UserEntity {
 
 BasePrincipalExtractor 라는 추상화 객체가 있고, BasePrincipalExtractor 는 PrincipalExtractor 를 구현한 후
 
-FacebookAuthoritiesExtractor, GithubAuthoritiesExtractor, KakaoPrincipalExtractor 클래스들이 BasePrincipalExtractor 를 상속하는 것이다.
+FacebookPrincipalExtractor, GithubPrincipalExtractor, KakaoPrincipalExtractor 클래스들이 BasePrincipalExtractor 를 상속하는 것이다.
 
 ```java
-@Component
 public abstract class BasePrincipalExtractor implements PrincipalExtractor {
 }
 
@@ -177,6 +176,8 @@ public class KakaoPrincipalExtractor extends BasePrincipalExtractor {
     }
 }
 ```
+
+`extractPrincipal` method 에서 각각 소셜로그인 후 가지고 온 정보를 가지고, DB 로 등록 해주면 된다.
 
 마지막으로, WebSecurityConfig 를 살짝 건드려 주면 된다.
 
