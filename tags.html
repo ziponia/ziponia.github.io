@@ -8,7 +8,7 @@ title: Tag
     <ul id="tag-list" class="tag-lists">
       {% for tag in site.tags %}
       <li>
-        <a href="{{ site.base_url }}/tags/{{ tag.name }}">{{ tag.name }}</a>
+        <a href="{{ site.base_url }}/tags/{{ tag.name }}">#{{ tag.name }}</a>
       </li>
       {% endfor %}
     </ul>
