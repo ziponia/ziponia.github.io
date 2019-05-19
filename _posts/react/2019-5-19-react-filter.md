@@ -2,7 +2,7 @@
 layout: post
 title: "[리액트] API 사용하기"
 summary: "Kakao API 를 활용해서 블로그 서비스를 만들어 보자"
-tagline: [kakao, search, axios, api]
+tags: [react]
 ---
 
 source: [https://github.com/ziponia/react-kakao-search-api](https://github.com/ziponia/react-kakao-search-api)

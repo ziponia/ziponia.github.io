@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[SPRING] Spring Security 사용하기 #2"
+tags: [spring, spring-boot, spring-security]
 ---
 
 Security 예외처리를 설정 해보자.

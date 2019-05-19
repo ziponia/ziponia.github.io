@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[리액트 #8] List 에 데이터 추가하기"
+tags: [react]
 ---
 
 List 에 데이터를 추가하자
@@ -67,8 +68,7 @@ const AddForm = props => {
       <fieldset>
         <legend>개인정보</legend>
         <label htmlFor="name">이름:</label>
-        <input type="text" id="name" onChange={props.onNameChange} />{" "}
-        {/* 여기와 */}
+        <input type="text" id="name" onChange={props.onNameChange} /> {/* 여기와 */}
         <br />
         <label htmlFor="name">나이:</label>
         <input type="text" id="age" onChange={props.onAgeChange} /> {/* 여기 */}
@@ -104,10 +104,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <AddForm
-          onNameChange={this.nameChangeHandler}
-          onAgeChange={this.ageChangeHandler}
-        />
+        <AddForm onNameChange={this.nameChangeHandler} onAgeChange={this.ageChangeHandler} />
         <List />
       </div>
     );
@@ -150,10 +147,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <AddForm
-          onNameChange={this.nameChangeHandler}
-          onAgeChange={this.ageChangeHandler}
-        />
+        <AddForm onNameChange={this.nameChangeHandler} onAgeChange={this.ageChangeHandler} />
         <List />
       </div>
     );
@@ -228,20 +222,10 @@ const AddForm = props => {
       <fieldset>
         <legend>개인정보</legend>
         <label htmlFor="name">이름:</label>
-        <input
-          type="text"
-          id="name"
-          onChange={props.onNameChange}
-          value={props.newName}
-        />
+        <input type="text" id="name" onChange={props.onNameChange} value={props.newName} />
         <br />
         <label htmlFor="name">나이:</label>
-        <input
-          type="text"
-          id="age"
-          onChange={props.onAgeChange}
-          value={props.newAge}
-        />
+        <input type="text" id="age" onChange={props.onAgeChange} value={props.newAge} />
         <br />
       </fieldset>
       <button onClick={props.onSubmit}>저장</button>

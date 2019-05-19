@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[리액트 #7] List 랜더링 하기"
+tags: [react]
 ---
 
 list 를 랜더링 하는 방법에 대해서 알아보자

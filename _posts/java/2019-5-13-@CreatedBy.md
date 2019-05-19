@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[JPA] @createdBy"
+tags: [jpa, spring-boot]
 ---
 
 Spring 의 `@CreatedBy` 어노테이션을 사용하려면 그냥 쓰면 안되고, 해당 기능을 정의 해 주어야 한다.

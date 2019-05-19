@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[SPRING] Spring Security 사용하기"
+tags: [spring, spring-boot, spring-security]
 ---
 
 spring boot 와 spring security 로 빠른 로그인 시스템을 만들어보자
