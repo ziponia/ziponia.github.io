@@ -469,3 +469,5 @@ _authorize_confirm.html_
 이제 url 요청을 하고, 최종결과, parameter 로 code 가 들어온다면, 성공이다.
 
 ![이미지](https://s3.ap-northeast-2.amazonaws.com/ziponia.github.io/2019-5-20/oauth-5.gif)
+
+내일 포스팅은, 가져 온 code 로 access token 까지 받아서, 리소스를 요청 해 보겠다.
