@@ -92,7 +92,7 @@ export default Client;
 
 첫번째와 두번째의 차이점은, `:keyword` 가 있냐 없냐이다. 나중에 `keyword` 값을 컴포넌트 내부에서 받을 것이다.
 
-이제 app js 로 가서 App 컴포넌트를 withRouter 로 감싸준다.
+app js 로 가서 App 컴포넌트를 withRouter 로 감싸준다.
 
 _src/App.js_
 
@@ -109,9 +109,9 @@ const App = props => {
 export default withRouter(App);
 ```
 
-이제 App.js 안에서 콘솔을 보면 router props 들이 추가 된 것을 볼 수 있다.
+App.js 안에서 콘솔을 보면 router props 들이 추가 된 것을 볼 수 있다.
 
-이제 App.js 상단에 아래와 같이 넣어주자.
+App.js 상단에 아래와 같이 넣어주자.
 
 _App.js_
 
