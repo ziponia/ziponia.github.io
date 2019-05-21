@@ -5,6 +5,10 @@ summary: "spring boot 로 인증서버 만들기"
 tags: [spring, spring-boot, spring-security]
 ---
 
+# 최종 목표
+
+![이미지](https://s3.ap-northeast-2.amazonaws.com/ziponia.github.io/2019-5-20/oauth-7.gif)
+
 지난번포스팅까지 잘 따라왔다면, 사실 조금 더 서비스에 맞는부분을 커스터마이징 해서 사용하는데 문제가 없다.
 
 근데 이런경우라면 생각해보자.
@@ -192,7 +196,11 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+        // 기본 AuthorizationServer Security 설정은 유지 한채,
+        // client 의 인증정보를 Header 가 아닌, form 으로 받을 수 있도록 한다.
         super.configure(security);
+        security
+                .allowFormAuthenticationForClients();
     }
 
     @Override
@@ -470,4 +478,78 @@ _authorize_confirm.html_
 
 ![이미지](https://s3.ap-northeast-2.amazonaws.com/ziponia.github.io/2019-5-20/oauth-5.gif)
 
-내일 포스팅은, 가져 온 code 로 access token 까지 받아서, 리소스를 요청 해 보겠다.
+이제 받아 온 코드로 토큰 발급 요청을 해 보자.
+
+```http
+POST http://localhost:8080/oauth/token
+[Header]
+Content-Type: application/x-www-form-urlencoded
+
+[Params]
+grant_type=authorization_code
+&client_id=clinet
+&clinet_secret=secret
+&redirect_uri=http://localhost:4000/api/callback
+&code={코드 받기에서 발급받은 code 값}
+```
+
+사실 [카카오 로그인 하기](https://developers.kakao.com/docs/restapi/user-management#%EB%A1%9C%EA%B7%B8%EC%9D%B8)
+
+에서 나오는 인증 flow 와 완전히 동일하다. (같은 oauth2 인증 플로우를 사용하니...)
+
+이제 넘어 온 코드로 토큰을 받아보자.
+
+![이미지](https://s3.ap-northeast-2.amazonaws.com/ziponia.github.io/2019-5-20/oauth-6.gif)
+
+이제 ResourceServerConfig 에 /api/private 경로를 추가하고, 컨트롤러를 만들어 테스트 해보자.
+
+_ResourceServerConfig.java_
+
+```java
+public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
+
+    @Override
+    public void configure(HttpSecurity http) throws Exception {
+
+        http
+                .requestMatchers()
+                .mvcMatchers("/api/**")
+                .and()
+                .authorizeRequests()
+                .antMatchers("/api/login").permitAll()
+                .antMatchers("/api/private").hasAnyRole("USER") // here
+                .antMatchers("/api/**").hasAuthority("CLIENT")
+                .and()
+                .formLogin()
+                .loginPage("/api/login")
+                .and()
+        ;
+    }
+}
+
+```
+
+_ApiController.java_
+
+```java
+@RestController
+public class ApiController {
+
+    // ...
+
+    @GetMapping(value = "/api/private")
+    public Map<String, String> privateApi() {
+        Map<String, String> model = new HashMap<>();
+        model.put("name", "jihoon");
+        model.put("nick", "zef");
+        return model;
+    }
+
+    // ...
+```
+
+![이미지](https://s3.ap-northeast-2.amazonaws.com/ziponia.github.io/2019-5-20/oauth-7.gif)
+
+꽤 멋진(?) 인증 시스템이 완료 되었다. 이제 외부로 client id 와 client secret 를 제공하여,
+
+리소스에 접근 권한을 줄 수 있다.
