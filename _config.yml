@@ -28,7 +28,6 @@ version: 1.0.0
 google_analytics: UA-140328041-1
 disqus: ziponia
 gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-paginate
 
