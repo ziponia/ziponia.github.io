@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[SPRING] Spring Security 사용하기 #7"
-summary: "Client DB 로 관리하기"
+summary: "oauth2 client 를 DB 로 관리하기"
 tags: [spring, spring-boot, spring-security]
 ---
 

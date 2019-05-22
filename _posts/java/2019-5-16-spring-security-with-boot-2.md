@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[SPRING] Spring Security 사용하기 #2"
+summary: "예외 처리를 해보자"
 tags: [spring, spring-boot, spring-security]
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[SPRING] Spring Security 사용하기 #3"
+summary: "spring security 로 social login을 구현 해보자."
 tags: [spring, spring-boot, spring-security]
 ---
 

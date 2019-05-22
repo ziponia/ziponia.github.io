@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[SPRING] Spring Security 사용하기"
+summary: "spring security 기본 사용법"
 tags: [spring, spring-boot, spring-security]
 ---
 

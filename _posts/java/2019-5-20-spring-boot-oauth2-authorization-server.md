@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[SPRING] Spring Security 사용하기 #6"
-summary: "spring boot 로 인증서버 만들기"
+summary: "web security 에 api 인증 서비스 만들기"
 tags: [spring, spring-boot, spring-security]
 ---
 

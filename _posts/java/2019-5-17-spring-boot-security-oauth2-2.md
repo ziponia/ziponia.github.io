@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[SPRING] Spring Security 사용하기 #4"
-summary: "Spring boot oauth2 에 Database 를 연결 하자"
+summary: "spring security social login 에 Database 를 연동하자"
 tags: [spring, spring-boot, spring-security]
 ---
 
