@@ -4,7 +4,9 @@ a:hover {
 
 .tag-lists {
   margin: 0;
+  margin-bottom: 0.5rem;
   padding: 0;
+  display: block;
 }
 
 .clearfix:before,
