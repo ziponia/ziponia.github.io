@@ -12,11 +12,6 @@ title: Home
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {% if post.summary %}
-    {{ post.summary }}
-    {% endif %}
     <ul class="main-list-tags">
       {% for tag in post.tags %}
       <li>
@@ -24,6 +19,12 @@ title: Home
       </li>
       {% endfor %}
     </ul>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {% if post.summary %}
+    {{ post.summary }}
+    {% endif %}
   </div>
   {% endfor %}
 </div>

@@ -46,6 +46,8 @@ a:hover {
   display: block;
   margin: 0;
   padding: 0;
+  margin-top: 10px;
+  margin-bottom: 0.5rem;
 }
 
 .main-list-tags li {
@@ -58,8 +60,9 @@ a:hover {
   display: block;
   background-color: #c4c4ce;
   color: #ffffff;
-  padding: 3px 6px;
-  border-radius: 2px;
+  padding: 1px 4px;
+  border-radius: 1px;
+  font-size: 14px;
 }
 
 .main-list-tags:after,
