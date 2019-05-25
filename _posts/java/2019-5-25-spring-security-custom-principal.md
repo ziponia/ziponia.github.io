@@ -5,6 +5,8 @@ summary: "Spring Security Principal Custom"
 tags: [spring, spring-boot, spring-security]
 ---
 
+source: [https://github.com/ziponia/spring-security-example](https://github.com/ziponia/spring-security-example)
+
 이번에는 Security Principal 객체를 커스터마이징 해보자.
 
 기존에 로그인 하게 되면 기본적으로 spring security context
