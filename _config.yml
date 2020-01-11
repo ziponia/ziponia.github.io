@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/"
+baseurl: ""
 url: "https://ziponia.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
