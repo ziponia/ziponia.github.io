@@ -1,41 +1,67 @@
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
+# SITE CONFIGURATION
+baseurl: "/"
+url: "https://ziponia.github.io"
 
-permalink: pretty
-# relative_permalinks: true
+# THEME-SPECIFIC CONFIGURATION
+title: 제프의 Study Room # site's title
+description: "제프의 스터디룸에 오신것을 환영합니다. Welcome to Zef's Study Room!" # used by search engines
+avatar: assets/img/triangle.png # Empty for no avatar in navbar
+favicon: assets/favicon.ico # Icon displayed in the tab
 
-# Setup
-title: 제프의 Study Room
-tagline: 제프의 블로그
-description: 제프의 스터디룸에 오신것을 환영합니다. Welcome to Zef's Study Room!
-url: https://ziponia.github.io
-baseurl: ""
-paginate: 10
-paginate_path: "page:num"
+# Header and footer text
+header_text: "&lt;WEB DEV&gt;" # Change Blog header text
+header_feature_image: assets/img/pexels/triangular.jpeg
+footer_text: >
+  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
-github:
-  repo: https://github.com/ziponia?tab=repositories
+# Blog
+excerpt: true # Or "truncate" (first 250 characters), "false" to disable
+post_navigation: true
+color_image: /assets/img/lineart.png # A bit transparent for color posts.
 
-# About/contact
-author:
-  name: ziponia
-  url: "https://github.com/ziponia"
-  email: thtjwls@gmail.com
+# Features
+katex: true # Enable if using math markup
+google_analytics: UA-140328041-1 # Tracking ID, e.g. "UA-000000-01"
+disqus_shortname: ziponia # Your discus shortname for comments
+layout_variables: # Open the "_sass > base" folder, and open "_variables.scss"
+footer_icons: # In _data/social.yml
+share_buttons: # In _data/social.yml
+authors: ziponia # In _data/authors.yml
+language: ko # In _data/language.yml
 
-# Custom vars
-version: 1.0.0
-google_analytics: UA-140328041-1
-disqus: ziponia
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
 
+# PORTFOLIO
 collections:
-  tags:
+  portfolio:
     output: true
-    permalink: /tags/:path/
+    permalink: /:collection/:name
 
-defaults:
-  - scope:
-      path: ""
-      type: tags
-    values:
-      layout: tag
+# BUILD SETTINGS
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: :compressed
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
+exclude:
+  [
+    ".jekyll-cache",
+    "Gemfile",
+    "Gemfile.lock",
+    "type-on-strap.gemspec",
+    "*.gem",
+    ".idea",
+    "vendor/*",
+    "LICENSE",
+    "README.md",
+    "screenshot.png",
+    "assets/package.json",
+    "assets/node_modules",
+    "assets/gulpfile.js",
+  ]
+
+# theme: type-on-strap                                  # if using the theme as a jekyll theme gem
+remote_theme: sylhare/Type-on-Strap # If using as a remote_theme in github
