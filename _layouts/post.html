@@ -3,7 +3,18 @@ layout: default
 ---
 
 {% include share_thumbnail.html page=page %}
-
+<article>
+  <!-- ads:content -->
+  <ins
+    class="adsbygoogle"
+    style="display:block; text-align:center;"
+    data-ad-layout="in-article"
+    data-ad-format="fluid"
+    data-ad-client="ca-pub-5907766199080796"
+    data-ad-slot="9389083244"
+  ></ins>
+  <!-- end ads:content -->
+</article>
 <article {% if page.feature-img or page.color %}class="feature-image" {% endif %}>
   <header id="main" style="">
     {% unless page.hide_title %}
@@ -18,16 +29,6 @@ layout: default
     </div>
     {% endif %}
   </section>
-  <!-- ads:content -->
-  <ins
-    class="adsbygoogle"
-    style="display:block; text-align:center;"
-    data-ad-layout="in-article"
-    data-ad-format="fluid"
-    data-ad-client="ca-pub-5907766199080796"
-    data-ad-slot="9389083244"
-  ></ins>
-  <!-- end ads:content -->
   <!-- Social media shares -->
   {% include share_buttons.html %}
 
