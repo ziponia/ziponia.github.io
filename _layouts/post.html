@@ -1,32 +1,38 @@
 ---
 layout: default
 ---
+
 {% include share_thumbnail.html page=page %}
 
-<article {% if page.feature-img or page.color %}class="feature-image"{% endif %}>
+<article {% if page.feature-img or page.color %}class="feature-image" {% endif %}>
   <header id="main" style="">
     {% unless page.hide_title %}
-      <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
-      {% include post_info.html author=page.author date=page.date %}
-    {% endunless %}
+    <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
+    {% include post_info.html author=page.author date=page.date %} {% endunless %}
   </header>
+  <!-- ads:display -->
   <section class="post-content">
-  {% if page.bootstrap %}
-    <div class="bootstrap-iso">
-    {% endif %}
-      {{ content }}
     {% if page.bootstrap %}
+    <div class="bootstrap-iso">
+      {% endif %} {{ content }} {% if page.bootstrap %}
     </div>
-  {% endif %}
+    {% endif %}
   </section>
-
+  <!-- ads:content -->
+  <ins
+    class="adsbygoogle"
+    style="display:block; text-align:center;"
+    data-ad-layout="in-article"
+    data-ad-format="fluid"
+    data-ad-client="ca-pub-5907766199080796"
+    data-ad-slot="9389083244"
+  ></ins>
+  <!-- end ads:content -->
   <!-- Social media shares -->
   {% include share_buttons.html %}
 
-   <!-- Tag list -->
-  {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
-  {% include tags_list.html tags=tag_list %}
-
+  <!-- Tag list -->
+  {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %} {% include tags_list.html tags=tag_list %}
 </article>
 
 <!-- Disqus -->
@@ -37,9 +43,7 @@ layout: default
 {% endif %}
 
 <!-- Post navigation -->
-{% if site.post_navigation  or site.theme_settings.post_navigation %}
-  {% include post_nav.html %}
-{% endif %}
+{% if site.post_navigation or site.theme_settings.post_navigation %} {% include post_nav.html %} {% endif %}
 
 <!-- To change color of links in the page -->
 <style>

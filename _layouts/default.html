@@ -8,12 +8,8 @@
 <html lang="ko">
   {% include head.html %}
   <body>
-    <!-- addsense:display -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    ></script>
-    <!-- display -->
+    {% include navbar.html %}
+    <!-- ads:display -->
     <ins
       class="adsbygoogle"
       style="display:block"
@@ -22,15 +18,15 @@
       data-ad-format="auto"
       data-full-width-responsive="true"
     ></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    <!-- end addsense:display -->
-
-    {% include navbar.html %}
+    <!-- end ads:display -->
     <div class="content">
       {{ content }}
     </div>
     {% include footer.html %}
+
+    <!-- addsense:setup -->
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   </body>
 </html>
