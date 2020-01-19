@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spring Rest Social Login"
+title: "Spring oauth2 server with social login"
 summary: "Spring Rest Social Login"
 tags: [spring, oauth2, social]
 ---
