@@ -12,11 +12,64 @@ Birthday _1988. 08. 01. KST_
 
 ### Info
 
-2016 년도부터 개발을 시작하여, 현재 서울 금천구 가산동 에서 코딩잡부를 맡고 있습니다.
+현재 4년차 개발자로 근무하고있고,
 
-Spring boot 와 JPA 를 좋아하고, React 를 즐겨합니다.
+필요 할 때 마다, 기술을 흡입하는, 하이브리드형 개발자입니다.
 
-React Native 를 취미 생활로 공부하고 있습니다.
+### 기술스택
+
+- Java
+
+  - Spring boot
+  - Spring Security
+    - Spring OAuth2 Server
+  - Spring netflexOSS
+  - Spring Integration
+  - JPA (via Spring-data-jpa, I Love it!)
+    - QueryDSL
+
+- NodeJS
+
+  - React
+    - Hook
+    - redux integration
+    - mobx
+  - Typescript (on happy :)
+  - typeorm
+  - Web Framework
+    - Nest (in progress...)
+    - koa
+    - express
+
+- Protocals
+
+  - Mqtt
+  - WS
+
+- Engine (in progress...)
+
+  - Kafka
+  - Elastic Search
+
+- Cloud Infra
+
+  - AWS (I love it!)
+  - Terraform (in progress...)
+  - k8s (I Hope.....)
+
+- Data
+
+  - mysql (mariaDB)
+  - MongoDB
+  - Redis (via Spring-data)
+  - GraphQL (in progress...)
+
+- Tools
+  - intellij (most!)
+  - vscode (most!)
+  - macOS
+  - Slack
+  - git (bitbucket, gitlab, github... anyting)
 
 ### Contact me
 
